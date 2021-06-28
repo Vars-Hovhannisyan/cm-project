@@ -42,7 +42,8 @@ public class DriverHelper {
                     break;
                 case "remote":
                     DesiredCapabilities capabilities = new DesiredCapabilities();
-                    capabilities.setBrowserName("chrome");
+                    capabilities.setBrowserName("firefox");
+                    capabilities.setCapability("enableVNC", true);
                     try {
                         driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
                     } catch (MalformedURLException e) {
